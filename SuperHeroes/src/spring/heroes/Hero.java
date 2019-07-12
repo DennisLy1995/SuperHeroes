@@ -1,13 +1,17 @@
 package spring.heroes;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Hero {
 
+	@Value("${HeroName}")
 	private String HeroName;
+	
+	@Value("${normalName}")
 	private String normalName;
+	
 	private Comic firstComic;
 
 
@@ -24,8 +28,8 @@ public class Hero {
 		return HeroName;
 	}
 
-	public void setHeroName(String heroName) {
-		HeroName = heroName;
+	public void setHeroName(String HeroName) {
+		this.HeroName = HeroName;
 	}
 
 	public String getNormalName() {

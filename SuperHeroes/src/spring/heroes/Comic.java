@@ -2,15 +2,25 @@ package spring.heroes;
 
 import java.sql.Date;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Comic {
 
+	@Value("${release}")
 	public Date release;
+	
+	@Value("${name}")
 	public String name;
+	
+	@Value("${publisher}")
 	public String publisher;
+	
+	@Value("${summary}")
 	public String summary;
+	
+	
 	public Date getRelease() {
 		return release;
 	}
