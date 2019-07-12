@@ -9,16 +9,16 @@ public class Hero {
 	@Value("${HeroName}")
 	private String HeroName;
 	
-	@Value("${normalName}")
-	private String normalName;
+	@Value("${identityName}")
+	private String identityName;
 	
 	private Comic firstComic;
+
 
 
 	public Comic getFirstComic() {
 		return firstComic;
 	}
-
 	
 	public void setFirstComic(Comic firstComic) {
 		this.firstComic = firstComic;
@@ -33,11 +33,11 @@ public class Hero {
 	}
 
 	public String getNormalName() {
-		return normalName;
+		return identityName;
 	}
 
 	public void setNormalName(String normalName) {
-		this.normalName = normalName;
+		this.identityName = normalName;
 	}
 
 }

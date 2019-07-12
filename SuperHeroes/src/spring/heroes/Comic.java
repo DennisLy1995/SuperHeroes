@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Comic {
 
-	@Value("${release}")
+	
 	public Date release;
 	
 	@Value("${name}")
@@ -19,7 +19,6 @@ public class Comic {
 	
 	@Value("${summary}")
 	public String summary;
-	
 	
 	public Date getRelease() {
 		return release;
